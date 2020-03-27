@@ -1,26 +1,25 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
-import moment from 'moment';
 
-class ExercisesList extends Component {
+class UserList extends Component {
     constructor(){
         super();
 
         this.state = {
-            user:[]
+            user:[],
+            username:''
         }
     }
 
     componentDidMount(){
         axios
-            .get(`http://localhost:5000/exercises`)
+            .get(`http://localhost:5000/users`)
             .then(response => {
                 // console.log('response: ', response.data);
                 if(response.data.length > 0){
                     this.setState({
-                        user: response.data.map(user=> 
-                          user),
+                        user: response.data.map(user=> user.username),
                     })
                 }
             })
@@ -35,14 +34,14 @@ class ExercisesList extends Component {
             <>
                 <ul>
                     {this.state.user.map( (user,index) =>
-                        <li key={index} className="user-list-style">
+                        <li key={user} className="user-list-style">
                             <PersonOutlineIcon className="username-icon-style"/>
-                            <p className="username-style">{user.username}</p>
+                            <p className="username-style">{user}</p>
                             <p className="caption-user-style">
-                                {user.description} | {user.duration} minutes
+                                Hi, {user} here is your exercise recaps this week
                             </p>
-                            <button className="button-date-style">
-                                {moment(user.date).format('LLL')}
+                            <button className="button-details-style">
+                                Detials &#8250;
                             </button>
                         </li>
                     )}
@@ -55,10 +54,10 @@ class ExercisesList extends Component {
         console.log('state: ', this.state);
         return(
             <>
-              {this.renderList()}
+                {this.renderList()}
             </>
         );
     }
 }
 
-export default ExercisesList;
+export default UserList;

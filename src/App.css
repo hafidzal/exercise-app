@@ -1,10 +1,177 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Questrial|Space+Mono&display=swap');
+
 .App {
   text-align: center;
+  padding: 0;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.title-bar-style{
+  display: block;
+  text-align: left;
+  padding-left: 10rem;
+}
+
+.title-bar-style a{
+  font-size: 36px;
+  font-family: 'Space Mono', monospace;
+  font-weight: bold;
+  padding: 0;
+}
+
+.title-bar-style p{
+  font-size: 16px;
+  font-family: 'Questrial', sans-serif;
+  color: #8B8B8B;
+}
+
+.navbar-list-style{
+  font-size: 16px;
+  font-family: 'Questrial', sans-serif;
+  padding-right: 5rem;
+}
+
+
+.logo-search-style{
+  border-top-left-radius: 20px !important;
+  border-bottom-left-radius: 20px !important;  
+  border-right: 0 !important;
+  background-color: #ffffff !important;  
+  padding-right: 0 !important;
+}
+
+.searchbox-style{
+  border-top-right-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;  
+  border-left: 0 !important;
+  padding-left: 0.5rem !important;
+}
+
+.input-group-prepend{
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.user-list-style{
+  margin: 1rem 5rem 0rem 5rem;
+  height: 13rem;
+  border-bottom: 1px solid #8B8B8B; 
+}
+
+.username-icon-style{
+  float: left;
+  margin-left: 10rem;
+  margin-top: 1.5rem;
+  height: 3rem !important;
+  width: 3rem !important;
+}
+
+.username-style{
+  float: left;
+  margin-left: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  font-size: 2em;
+  font-family: 'Questrial', sans-serif;
+}
+
+.caption-user-style{
+  clear: left;
+  float: left;
+  margin-left: 14rem;
+  font-size: 1.3em;
+  font-family: 'Questrial', sans-serif;
+  color: #8B8B8B;
+}
+
+.button-date-style{
+  clear: left;
+  float: left;
+  margin-left: 10rem;
+  width: 15rem;
+  height: 2.5rem;
+  border: 0;
+  border-radius: 20px;
+  font-family: 'Questrial', sans-serif;
+  color: #ffffff;
+  background-color: #C4C4C4;
+  font-size: 1em;
+  padding: 0;
+}
+
+.button-details-style{
+  clear: left;
+  float: left;
+  margin-left: 14rem;
+  font-size: 1em;
+  font-family: 'Questrial', sans-serif;
+  color: #ffffff;
+  background-color: #C4C4C4;
+  width: 7rem;
+  height: 2.5rem;
+  border: 0;
+  border-radius: 20px;
+}
+
+.success-alert-style{
+  margin: 0 3rem 0 3rem;
+}
+
+.create-user-style{
+  display: block;
+}
+
+.searchbox-user-style{
+  margin-top: 4rem; 
+  border-radius: 20px;
+  width: 15rem;
+  height: 2.5rem;
+  border: 1px solid #8B8B8B;
+  margin-right: 1rem;
+  padding-left: 2rem;
+}
+
+.button-create-user-style{
+  width: 7rem;
+  height: 2.5rem;
+  border: 0;
+  border-radius: 20px;
+  font-family: 'Questrial', sans-serif;
+  color: #ffffff;
+  background-color: #C4C4C4;
+  font-size: 1em;
+  padding: 0;
+}
+
+
+
+::-webkit-input-placeholder {
+  font-size: 14px;
+}
+::-moz-placeholder {
+  font-size: 14px;
+}
+:-ms-input-placeholder {
+  font-size: 14px;
+}
+::placeholder {
+  font-size: 14px;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+.button-create-user-style:focus {
+  outline: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
